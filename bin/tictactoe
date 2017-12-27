@@ -1,3 +1,5 @@
 #!/usr/bin/env ruby
 
 require_relative '../config/environment'
+
+# this is where your tic tac toe game will run 
