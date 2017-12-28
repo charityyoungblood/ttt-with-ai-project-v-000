@@ -28,8 +28,9 @@ class Board
     puts " #{@cells[6]} | #{@cells[7]} | #{@cells[8]} "
   end 
   
-  def position 
-    
+  def position(index) # this method takes in user input (number) and returns the value of the board cell 
+    move = index.to_i - 1
+    @cells[move]
   end 
   
 end 
