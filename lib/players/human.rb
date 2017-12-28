@@ -1,5 +1,8 @@
 # this should be a module 
-
-module Human
+module Players
+  
+#  module Human < Player
+#    
+#  end 
   
 end 
