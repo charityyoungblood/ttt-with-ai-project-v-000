@@ -48,8 +48,9 @@ class Board
     @cells[position] == "X" || @cells[position] == "O"
   end 
   
-  def valid_move? # this method will return true if user input is between 1 and 9 
-    
+  def valid_move?(index) # this method will return true if user input is between 1 and 9 
+    index = index.to_i 
+    (1..9).include?(index) && !taken?(index)
   end 
   
   
