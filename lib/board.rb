@@ -1,14 +1,18 @@
 class Board 
- 
+
   def initialize 
     
   end 
   
-  def cells 
+  def cells # this method should set the cells attribute to an empty array
     @cells = []
   end 
   
-  def reset! 
+  def cells=(cells)
+    @cells = cells
+  end 
+  
+  def reset! # this method should clear the board - sets all cells to " "
     @cells = [" "," "," "," "," "," "," "," "," "]
   end 
   
