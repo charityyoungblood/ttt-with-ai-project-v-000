@@ -33,4 +33,32 @@ class Board
     @cells[move]
   end 
   
+  def full?
+    @cells.all? do |completed_game|
+    completed_game.include?("X") || completed_game.include?("O")
+  end 
+  end 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 end 
