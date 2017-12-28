@@ -20,21 +20,16 @@ class Board
   
   def display
    
-    # this method prints the board 
-#    cells.each_with_index do |cell, index|
-#      puts "this is #{cell[index]}"
-#      binding.pry 
-#      # iterate over the cells array and print the values of each index
-#     
-#    end
-   
     horizontal_lines = "-----------"
     puts " #{@cells[0]} | #{@cells[1]} | #{@cells[2]} "
     puts horizontal_lines
     puts " #{@cells[3]} | #{@cells[4]} | #{@cells[5]} "
     puts horizontal_lines
     puts " #{@cells[6]} | #{@cells[7]} | #{@cells[8]} "
- 
+  end 
+  
+  def position 
+    
   end 
   
 end 
