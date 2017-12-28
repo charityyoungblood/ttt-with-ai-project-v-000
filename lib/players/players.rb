@@ -4,12 +4,13 @@ module Players
   
   class Human < Player
     def move(index) 
-      binding.pry
-      user_input = gets.chomp.to_i
-      turn = user_input - 1
-      @cells[turn]
+      user_input = gets.chomp
+      user_input
     end 
   end
   
+  class Computer < Player
+    
+  end 
   
 end 
