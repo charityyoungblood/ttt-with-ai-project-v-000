@@ -53,6 +53,10 @@ class Board
     (1..9).include?(index) && !taken?(index)
   end 
   
+  def update(index, token)
+  
+  end 
+  
   
   
   
