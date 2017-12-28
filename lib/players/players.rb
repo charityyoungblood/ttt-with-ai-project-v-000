@@ -15,19 +15,27 @@ module Players
     end
     
     def move(board) # this method will take a board object as an argument
-      binding.pry
-      # get program to return all open cells 
-      board.cells.find_all do |r, index|
-        if r.include?(" ")
-          r[index]
-        end 
-#      unless board.cells.include?("X") || board.cells.include?("O")
-#      if valid_move?(index) # check to see if position is occupied 
-#      # return string of open position
-#        index
-      end
-    end
-        # go through the cells array and see if position is taken, if not - return open cells
+      
+      board.cells[0].include?(" ") 
+      board.cells[0].replace("1")
+      board.cells[1].include?(" ") 
+      board.cells[1].replace("2")
+      board.cells[2].include?(" ") 
+      board.cells[2].replace("3")
+      board.cells[3].include?(" ") 
+      board.cells[3].replace("4")
+      board.cells[4].include?(" ") 
+      board.cells[4].replace("5")
+      board.cells[5].include?(" ") 
+      board.cells[5].replace("6")
+      board.cells[6].include?(" ") 
+      board.cells[6].replace("7")
+      board.cells[7].include?(" ") 
+      board.cells[7].replace("8")
+      board.cells[8].include?(" ") 
+      board.cells[8].replace("9")
+      
+       # go through the cells array and see if position is taken, if not - return open cells
     end
   end 
   
