@@ -41,6 +41,7 @@ describe 'Game' do
   end
 
   describe 'initialize' do
+    
     it 'accepts 2 players and a board' do
       board = Board.new
       player_1 = Player.new("X")

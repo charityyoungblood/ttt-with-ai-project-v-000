@@ -1,4 +1,12 @@
 class Game 
+  attr_accessor :board, :player_1, :player_2
+  
+  def initialize(player_1 = Players::Human.new("X") , player_2 = Players::Human.new("O"), board = Board.new) # initialize with 2 players and a board object - which are default values
+    
+    @player_1 = player_1
+    @player_2 = player_2 
+    @board = board
+  end 
   
   WIN_COMBINATIONS = [
   [0,1,2],
@@ -12,9 +20,8 @@ class Game
 
 ]
 
-  def board # this method should return an empty array
-    binding.pry
-    Board.cells
-  end 
-  
+#  def board # this method should return an empty array
+#    @board 
+#  end 
+#  
 end 
