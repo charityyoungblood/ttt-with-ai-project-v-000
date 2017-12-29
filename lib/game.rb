@@ -25,6 +25,13 @@ class Game
       player_1
     end
   end 
+  
+  
+  
+  
+  def over? 
+    won?(board) || draw?(board) || full?(board)
+  end 
 
 #  def board # this method should return an empty array
 #    @board 
