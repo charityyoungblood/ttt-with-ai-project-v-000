@@ -26,6 +26,13 @@ class Game
     end
   end 
   
+  def won?
+     WIN_COMBINATIONS.detect do |winning_combo|
+    winning_combo.all? { |index| @board[index] == "X" } ||
+    winning_combo.all? { |index| @board[index] == "O" }
+     end
+    
+  end 
   
   
   
