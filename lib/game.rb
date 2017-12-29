@@ -46,11 +46,15 @@ class Game
   def winner 
     # return the token, "X" or "O" that has won the game given a winning board.
     # if won?(board) && !draw(board)
-    if won?(board)
-    combo = won?(board) #[0, 1, 2]
-    board[combo[0]]
+    if won?
+      combo = won? #[0, 1, 2]
+      @board.cells[combo[0]]
     end
-
+  end 
+  
+  def turn 
+    binding.pry
+    user_input = gets.chomp
   end 
   
   
