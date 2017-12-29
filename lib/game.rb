@@ -12,5 +12,9 @@ class Game
 
 ]
 
+  def board # this method should return an empty array
+    binding.pry
+    Board.cells
+  end 
   
 end 
