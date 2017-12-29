@@ -18,7 +18,13 @@ class Game
   [0,4,8],
   [6,4,2]
 
-]
+      ]
+  
+  def current_player # this method will display the player_1 token on the third move
+    if board.turn_count == 2
+      player_1
+    end
+  end 
 
 #  def board # this method should return an empty array
 #    @board 
