@@ -27,17 +27,23 @@ class Game
   end 
   
   def won?
-     WIN_COMBINATIONS.detect do |winning_combo|
-    winning_combo.all? { |index| @board[index] == "X" } ||
-    winning_combo.all? { |index| @board[index] == "O" }
-     end
     
+     WIN_COMBINATIONS.detect do |winning_combo|
+    winning_combo.all? { |index| 
+      @board.cells[index] == "X" } ||
+    winning_combo.all? { |index| @board.cells[index] == "O" }
+       
+     end 
+       # this method should return the winning combo
   end 
   
-  
+  def draw?
+    !won? && board.full?
+  end 
   
   def over? 
-    won?(board) || draw?(board) || full?(board)
+    binding.pry
+    won? || draw? 
   end 
 
 #  def board # this method should return an empty array
