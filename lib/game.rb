@@ -27,12 +27,10 @@ class Game
   end 
   
   def won?
-    
      WIN_COMBINATIONS.detect do |winning_combo|
     winning_combo.all? { |index| 
       @board.cells[index] == "X" } ||
     winning_combo.all? { |index| @board.cells[index] == "O" }
-       
      end 
        # this method should return the winning combo
   end 
@@ -42,12 +40,45 @@ class Game
   end 
   
   def over? 
-    binding.pry
     won? || draw? 
   end 
 
-#  def board # this method should return an empty array
-#    @board 
-#  end 
-#  
+  def winner 
+    # return the token, "X" or "O" that has won the game given a winning board.
+    # if won?(board) && !draw(board)
+    if won?(board)
+    combo = won?(board) #[0, 1, 2]
+    board[combo[0]]
+    end
+
+  end 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 end 
