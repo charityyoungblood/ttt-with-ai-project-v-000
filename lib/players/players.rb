@@ -6,10 +6,10 @@ module Players
   end 
   
   class Human < Player
-    def move(index) 
+    def move(board) 
       user_input = gets.chomp
-      user_input
     end 
+
   end
   
   class Computer < Player

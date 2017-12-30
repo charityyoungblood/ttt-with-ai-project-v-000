@@ -20,9 +20,11 @@ class Game
 
       ]
   
-  def current_player # this method will display the player_1 token on the third move
-    if board.turn_count == 2
+  def current_player # this method will display the 
+    if board.turn_count.even? # is turn_count even or odd 
       player_1
+    else 
+      player_2
     end
   end 
   
@@ -56,12 +58,12 @@ class Game
     # loop through asking for user input until user input is valid 
     # take user_input value and place token in the index selected
     binding.pry
-    user_input = gets.chomp
-      Human.move(user_input)
-#      while user_input == nil || !(1..9).include?(user_input.to_i)
-#      puts "invalid"
-#      user_input = gets.chomp
-#      end 
+    current_turn = current_player.move(board) #this calls turn on the return value from the current_player method 
+    current_turn = current_turn.to_i
+      while current_player.move(board) == nil || !(1..9).include?(current_turn)
+      puts "invalid"
+      user_input = gets.chomp
+      end 
         if @board.valid_move?(user_input)
         @board.update(user_input, player_1)
         end 

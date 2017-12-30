@@ -1,8 +1,7 @@
  class Human < Player
-   def initialize
-   end 
    
-    def move(index) 
+   
+    def move(board) 
       user_input = gets.chomp
       user_input
     end 

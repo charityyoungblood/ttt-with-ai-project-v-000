@@ -6,6 +6,7 @@ describe 'Players::Human' do
   end
 
   describe '#move' do
+    
     it 'asks the user for input and returns it' do
       human = Players::Human.new("X")
       allow($stdout).to receive(:puts)
