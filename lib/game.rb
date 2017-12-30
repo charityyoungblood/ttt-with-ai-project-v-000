@@ -53,8 +53,12 @@ class Game
   end 
   
   def turn 
-    binding.pry
+    
     user_input = gets.chomp
+      while user_input == nil || !(1..9).include?(user_input.to_i)
+      puts "invalid"
+      user_input = gets.chomp
+      end 
   end 
   
   
