@@ -58,10 +58,10 @@ class Game
     # loop through asking for user input until user input is valid 
     # take user_input value and place token in the index selected
    
-    current_turn = current_player.move(board) #this calls turn on the return value from the current_player method 
-      while !@board.valid_move?(current_turn)
+    current_turn = current_player.move(@board) #this calls turn on the return value from the current_player method 
+      if !@board.valid_move?(current_turn)
       puts "invalid"
-      current_turn
+      current_player.move(@board)
       end 
 ##        if @board.valid_move?(current_turn)
 ##        @board.update(current_turn, current_player)
