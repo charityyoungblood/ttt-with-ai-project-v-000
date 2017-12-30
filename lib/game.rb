@@ -52,17 +52,24 @@ class Game
     end
   end 
   
-  def turn 
-    
+  def turn # this method will verify user input in between 1-9
+    # loop through asking for user input until user input is valid 
+    # take user_input value and place token in the index selected
+    binding.pry
     user_input = gets.chomp
       while user_input == nil || !(1..9).include?(user_input.to_i)
       puts "invalid"
       user_input = gets.chomp
       end 
     binding.pry
-    @board.position(index)
-    @board.update(index, player)
-    @board.display
+      if valid_move?
+        @board.update(user_input, player_1)
+        @board.display
+      end 
+    
+#    @board.position(index # this method will check if the position is empty - if it is empty, player can place token there
+#    @board.update(index, player)
+#    @board.display
   end 
   
   
