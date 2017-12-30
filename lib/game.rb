@@ -59,7 +59,12 @@ class Game
       puts "invalid"
       user_input = gets.chomp
       end 
+    binding.pry
+    @board.position(index)
+    @board.update(index, player)
+    @board.display
   end 
+  
   
   
   
