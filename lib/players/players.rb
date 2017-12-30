@@ -2,6 +2,9 @@
 
 module Players 
   
+  class Board
+  end 
+  
   class Human < Player
     def move(index) 
       user_input = gets.chomp

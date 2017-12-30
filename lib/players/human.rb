@@ -1,8 +1,11 @@
-# this should be a module 
-module Players
-  
-#  module Human < Player
-#    
-#  end 
+ class Human < Player
+   def initialize
+   end 
+   
+    def move(index) 
+      user_input = gets.chomp
+      user_input
+    end 
+
   
 end 

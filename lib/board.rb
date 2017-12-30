@@ -55,7 +55,8 @@ class Board
   
   def update(index, player) # this method has two arguments, the index the player inputs and the player object
     player_index = index.to_i - 1
-    @cells[player_index] = player.token # player.token will display the token set in the player object
+    @cells[player_index] = player.token
+    # player.token will display the token set in the player object
   end 
   
   
