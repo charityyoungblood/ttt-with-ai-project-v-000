@@ -54,23 +54,15 @@ class Game
     end
   end 
   
-  def turn # this method will verify user input in between 1-9
-    # loop through asking for user input until user input is valid 
-    # take user_input value and place token in the index selected
+  def turn # this method will verify user input 
    
     current_turn = current_player.move(@board) #this calls turn on the return value from the current_player method 
       if !@board.valid_move?(current_turn)
       puts "invalid"
       current_player.move(@board)
       end 
-##        if @board.valid_move?(current_turn)
-##        @board.update(current_turn, current_player)
-#          current_turn
-#        
-    
-#    @board.position(index # this method will check if the position is empty - if it is empty, player can place token there
-#    @board.update(index, player)
-#    @board.display
+    current_player # how do you switch to the next player?
+
   end 
   
   
